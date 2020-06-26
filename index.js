@@ -76,7 +76,7 @@ const questions = [
 function init() {
     inquirer.prompt(questions).then((response) => { 
         // create the first line # is used bc it is the main header of repo
-        fs.writeToFile("./generatedREADMEs/README.md", ("#" + response.repo) + '\n', function (err) {
+        fs.appendFileSync("./generatedREADMEs/README.md", ("# " + response.repo) + '\n', function (err) {
             if (err) {
                 console.log(err)
             } else {
@@ -84,7 +84,7 @@ function init() {
             }
         })
         //adds description from user input
-        fs.writeToFile("./generatedREADMEs/README.md", ("## Description" + '\n' + response.description) + '\n', function (err) {
+        fs.appendFileSync("./generatedREADMEs/README.md", ("## Description" + '\n' + response.description) + '\n', function (err) {
             if (err) {
                 console.log(err)
             } else {
@@ -92,7 +92,7 @@ function init() {
             }
         })
          //adds installation from user input
-         fs.writeToFile("./generatedREADMEs/README.md", ("## Installation" + '\n' + response.installation) + '\n', function (err) {
+         fs.appendFileSync("./generatedREADMEs/README.md", ("## Installation" + '\n' + response.installation) + '\n', function (err) {
             if (err) {
                 console.log(err)
             } else {
@@ -100,7 +100,7 @@ function init() {
             }
         })
          //adds usage from user input
-         fs.writeToFile("./generatedREADMEs/README.md", ("## Usage" + '\n' + response.usage) + '\n', function (err) {
+         fs.appendFileSync("./generatedREADMEs/README.md", ("## Usage" + '\n' + response.usage) + '\n', function (err) {
             if (err) {
                 console.log(err)
             } else {
@@ -108,7 +108,7 @@ function init() {
             }
         })
          //adds contribution from user input
-         fs.writeToFile("./generatedREADMEs/README.md", ("## Contribution" + '\n' + response.contribution) + '\n', function (err) {
+         fs.appendFileSync("./generatedREADMEs/README.md", ("## Contribution" + '\n' + response.contribution) + '\n', function (err) {
             if (err) {
                 console.log(err)
             } else {
@@ -116,7 +116,7 @@ function init() {
             }
         })
          //adds test from user input
-         fs.writeToFile("./generatedREADMEs/README.md", ("## Tests" + '\n' + response.test) + '\n', function (err) {
+         fs.appendFileSync("./generatedREADMEs/README.md", ("## Tests" + '\n' + response.test) + '\n', function (err) {
             if (err) {
                 console.log(err)
             } else {
@@ -124,7 +124,7 @@ function init() {
             }
         })
          //adds license from user input
-         fs.writeToFile("./generatedREADMEs/README.md", ("## License" + '\n' + response.license) + '\n', function (err) {
+         fs.appendFileSync("./generatedREADMEs/README.md", ("## License" + '\n' + response.license) + '\n', function (err) {
             if (err) {
                 console.log(err)
             } else {
@@ -132,7 +132,7 @@ function init() {
             }
         })
         //adds username and email from user input
-        fs.writeToFile("./generatedREADMEs/README.md", ("## Questions" + '\n' + response.username + '\n' + response.email) + '\n', function (err) {
+        fs.appendFileSync("./generatedREADMEs/README.md", ("## Questions" + '\n' + response.username + '\n' + response.email) + '\n', function (err) {
             if (err) {
                 console.log(err)
             } else {
