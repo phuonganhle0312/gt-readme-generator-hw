@@ -93,7 +93,7 @@ function init() {
             }
         })
         //table of contents
-        fs.appendFileSync("./generatedREADMEs/README.md", ("## Table of Contents" + '\n' + "1. [Installation . ](#installation)" + '\n' + "2. [Usage . ](#usage)"+ '\n' + "3. [Contribution . ](#contribution)" + '\n' + "4. [Tests . ](#test)" + '\n' + "5. [License . ](#license)" + '\n' + "5. [Questions . ](#username)" + '\n'), function (err) {
+        fs.appendFileSync("./generatedREADMEs/README.md", ("## Table of Contents" + '\n' + "1. [Installation . ](#installation)" + '\n' + "2. [Usage . ](#usage)"+ '\n' + "3. [Contribution . ](#contribution)" + '\n' + "4. [Tests . ](#tests)" + '\n' + "5. [License . ](#license)" + '\n' + "5. [Questions . ](#questions)") + '\n', function (err) {
             if (err) {
                 console.log(err)
             } else {
